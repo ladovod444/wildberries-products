@@ -133,7 +133,7 @@ final class PrintController extends AbstractController
          */
 
         $WbBarcodeSettingsResult = $WbBarcodeSettings
-            ->forProduct($ProductDetailByEventResult->getProductMain())
+            ->forProduct($ProductDetailByEventResult->getProductId())
             ->find();
 
         return $this->render(
