@@ -40,6 +40,11 @@ final class LengthCmWildberriesProductParameters implements WildberriesProductPa
 
     public const int ID = 90675;
 
+    public function getName(): string
+    {
+        return 'Длина предмета, см';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -102,10 +107,5 @@ final class LengthCmWildberriesProductParameters implements WildberriesProductPa
             (string) self::ID,
             mb_strtolower($this->getName()),
         ], true);
-    }
-
-    public function getName(): string
-    {
-        return 'Длина предмета, см';
     }
 }

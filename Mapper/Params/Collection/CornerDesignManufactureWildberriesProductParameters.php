@@ -40,6 +40,11 @@ final class CornerDesignManufactureWildberriesProductParameters implements Wildb
 
     public const int ID = 15002751;
 
+    public function getName(): string
+    {
+        return 'Угловая конструкция';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -104,9 +109,5 @@ final class CornerDesignManufactureWildberriesProductParameters implements Wildb
         ], true);
     }
 
-    public function getName(): string
-    {
-        return 'Угловая конструкция';
-    }
 
 }

@@ -40,6 +40,11 @@ final class MaterialFacadeWildberriesProductParameters implements WildberriesPro
 
     public const int ID = 15000814;
 
+    public function getName(): string
+    {
+        return 'Материал фасада';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -104,8 +109,4 @@ final class MaterialFacadeWildberriesProductParameters implements WildberriesPro
         ], true);
     }
 
-    public function getName(): string
-    {
-        return 'Материал фасада';
-    }
 }

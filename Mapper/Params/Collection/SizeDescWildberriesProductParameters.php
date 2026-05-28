@@ -40,6 +40,11 @@ final class SizeDescWildberriesProductParameters implements WildberriesProductPa
 
     public const int ID = 355546;
 
+    public function getName(): string
+    {
+        return 'Размер стола (ДхШ), см';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -102,10 +107,5 @@ final class SizeDescWildberriesProductParameters implements WildberriesProductPa
             (string) self::ID,
             mb_strtolower($this->getName()),
         ], true);
-    }
-
-    public function getName(): string
-    {
-        return 'Размер стола (ДхШ), см';
     }
 }

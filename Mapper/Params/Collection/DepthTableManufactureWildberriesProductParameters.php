@@ -40,6 +40,11 @@ final class DepthTableManufactureWildberriesProductParameters implements Wildber
 
     public const int ID = 366736;
 
+    public function getName(): string
+    {
+        return 'Толщина столешницы';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -103,10 +108,4 @@ final class DepthTableManufactureWildberriesProductParameters implements Wildber
             mb_strtolower($this->getName()),
         ], true);
     }
-
-    public function getName(): string
-    {
-        return 'Толщина столешницы';
-    }
-
 }

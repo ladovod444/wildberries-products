@@ -40,6 +40,11 @@ final class CabinetLocationManufactureWildberriesProductParameters implements Wi
 
     public const int ID = 15002750;
 
+    public function getName(): string
+    {
+        return 'Расположение тумбы';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -104,9 +109,5 @@ final class CabinetLocationManufactureWildberriesProductParameters implements Wi
         ], true);
     }
 
-    public function getName(): string
-    {
-        return 'Расположение тумбы';
-    }
 
 }

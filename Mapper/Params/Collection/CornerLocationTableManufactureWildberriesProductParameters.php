@@ -40,6 +40,11 @@ final class CornerLocationTableManufactureWildberriesProductParameters implement
 
     public const int ID = 15000835;
 
+    public function getName(): string
+    {
+        return 'Расположение угла стола';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -102,11 +107,6 @@ final class CornerLocationTableManufactureWildberriesProductParameters implement
             (string) self::ID,
             mb_strtolower($this->getName()),
         ], true);
-    }
-
-    public function getName(): string
-    {
-        return 'Расположение угла стола';
     }
 
 }
