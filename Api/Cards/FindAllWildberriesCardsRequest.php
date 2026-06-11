@@ -103,7 +103,11 @@ final class FindAllWildberriesCardsRequest extends Wildberries
 
                 if($response->getStatusCode() !== 200)
                 {
-                    $this->logger->critical('wildberries: Ошибка списка карточек ', [$content, self::class.':'.__LINE__]);
+                    $this->logger->critical(
+                        sprintf('wildberries: Ошибка %s списка карточек ', $response->getStatusCode()),
+                        [$content, self::class.':'.__LINE__],
+                    );
+
                     return false;
                 }
 
