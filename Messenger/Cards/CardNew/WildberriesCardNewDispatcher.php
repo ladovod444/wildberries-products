@@ -330,6 +330,16 @@ final readonly class WildberriesCardNewDispatcher
                     // поиск цвета по идентификатору (временно для футболок)
                     $CharValue = $WildberriesCardDTO->getCharacteristic(ColorWildberriesProductParameters::ID);
 
+                    if(empty($CharValue))
+                    {
+                        $this->logger->critical(
+                            sprintf('wildberries-products: значение по идентификатору %s не найдено', ColorWildberriesProductParameters::ID),
+                            [$size,],
+                        );
+
+                        continue;
+                    }
+
                     /**
                      * @note Если указана библиотека, и значение не найдено - будет присвоено значение, и записан лог с значением
                      */
