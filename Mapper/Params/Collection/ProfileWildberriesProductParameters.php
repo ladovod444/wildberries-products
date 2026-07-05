@@ -71,8 +71,6 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
 
     public function getData(WildberriesProductsCardResult $data, ?TranslatorInterface $translator = null): ?array
     {
-
-
         $product_params = $data->getProductParams();
 
         if(false !== $data->getProductParams())
@@ -84,7 +82,8 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
                     return [
                         'id' => $this::ID,
                         'name' => $this->getName(),
-                        'value' => $product_param->value,
+                        /** Если шина безразмерная - указываем по умолчанию 80 */
+                        'value' => $product_param->value === 'null' ? '80' : $product_param->value,
                     ];
                 }
             }
