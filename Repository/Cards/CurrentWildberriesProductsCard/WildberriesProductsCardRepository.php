@@ -270,15 +270,6 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     type: ProductOfferConst::TYPE,
                 );
 
-            $dbal
-                ->leftJoin(
-                    'product_offer',
-                    ProductOfferBarcode::class,
-                    'product_offer_barcode',
-                    'product_offer_barcode.offer = product_offer.id',
-                );
-
-
         }
         else
         {
@@ -293,6 +284,14 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     'product_offer.event = product.event',
                 );
         }
+
+        $dbal
+            ->leftJoin(
+                'product_offer',
+                ProductOfferBarcode::class,
+                'product_offer_barcode',
+                'product_offer_barcode.offer = product_offer.id',
+            );
 
         /**
          * ProductVariation
@@ -315,16 +314,6 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     value: $this->variationConst,
                     type: ProductVariationConst::TYPE,
                 );
-
-
-            $dbal
-                ->leftJoin(
-                    'product_variation',
-                    ProductVariationBarcode::class,
-                    'product_variation_barcode',
-                    'product_variation_barcode.variation = product_variation.id',
-                );
-
         }
         else
         {
@@ -339,6 +328,14 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     'product_variation.offer = product_offer.id',
                 );
         }
+
+        $dbal
+            ->leftJoin(
+                'product_variation',
+                ProductVariationBarcode::class,
+                'product_variation_barcode',
+                'product_variation_barcode.variation = product_variation.id',
+            );
 
         /**
          * ProductModification
@@ -361,15 +358,6 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     value: $this->modificationConst,
                     type: ProductModificationConst::TYPE,
                 );
-
-            $dbal
-                ->leftJoin(
-                    'product_modification',
-                    ProductModificationBarcode::class,
-                    'product_modification_barcode',
-                    'product_modification_barcode.modification = product_modification.id',
-                );
-
         }
         else
         {
@@ -384,6 +372,15 @@ final class WildberriesProductsCardRepository implements WildberriesProductsCard
                     'product_modification.variation = product_variation.id',
                 );
         }
+
+
+        $dbal
+            ->leftJoin(
+                'product_modification',
+                ProductModificationBarcode::class,
+                'product_modification_barcode',
+                'product_modification_barcode.modification = product_modification.id',
+            );
 
 
         if($this->offerConst instanceof ProductOfferConst)

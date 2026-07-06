@@ -41,11 +41,15 @@ final class WbCharacteristicDTO
     /** Обязательное */
     private bool $required;
 
+    /** Единица измерения */
+    private ?string $unit;
+
     public function __construct(array $data)
     {
         $this->id = $data['charcID'];
         $this->name = $data['name'];
         $this->required = $data['required'];
+        $this->unit = $data['unitName'];
     }
 
     /**
@@ -70,6 +74,13 @@ final class WbCharacteristicDTO
     public function isRequired(): bool
     {
         return $this->required;
+    }
+
+
+    /** Единица измерения */
+    public function getUnit(): ?string
+    {
+        return $this->unit;
     }
 
 }

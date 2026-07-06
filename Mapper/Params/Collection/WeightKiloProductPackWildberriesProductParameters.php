@@ -36,9 +36,16 @@ final class WeightKiloProductPackWildberriesProductParameters implements Wildber
 {
     public const array CATEGORY = [
         WildberriesProductProperty::CATEGORY_TIRE,
+        WildberriesProductProperty::CATEGORY_DESKS,
+        WildberriesProductProperty::CATEGORY_RACKS,
     ];
 
     public const int ID = 88953;
+
+    public function getName(): string
+    {
+        return 'Вес товара с упаковкой (кг)';
+    }
 
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
@@ -109,8 +116,4 @@ final class WeightKiloProductPackWildberriesProductParameters implements Wildber
         ], true);
     }
 
-    public function getName(): string
-    {
-        return 'Вес товара с упаковкой (кг)';
-    }
 }

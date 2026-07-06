@@ -30,21 +30,22 @@ final class WildberriesProductProperty
 {
     public const string TYPE = 'wb_product_property';
     public const int CATEGORY_TIRE = 5283;  // Шины автомобильные
-    public const int CATEGORY_SHIRTS = 192;
+
 
     public const int CATEGORY_DESKS = 7611; // Столы письменные
     public const int CATEGORY_RACKS = 1901; // Стелажи
 
-    public const int CATEGORY_HOODIE = 1724; // Футболки
-    public const int CATEGORY_JEANS = 180; // Худи
-    public const int CATEGORY_SVITSHOT = 159; // Джинсы
-    public const int CATEGORY_TOP = 185; // Свитшоты
-    public const int CATEGORY_KITCHEN_APRONS = 402; // Топы
-    public const int CATEGORY_WORKERS_APRONS = 3188; // Фартуки кухонные
-    public const int CATEGORY_SLIPPERS = 106; // Фартуки рабочие;
-    public const int CATEGORY_STRAPS = 107; // Тапки;
-    public const int CATEGORY_SABO = 98; // Шлепанцы;
-    public const int CATEGORY_SHIRTS_SPORT = 5217; // Cабо;
+    public const int CATEGORY_SHIRTS = 192; // Футболки
+    public const int CATEGORY_SHIRTS_SPORT = 5217; // Спортивные футболки
+    public const int CATEGORY_HOODIE = 1724; // Худи
+    public const int CATEGORY_JEANS = 180; // Джинсы
+    public const int CATEGORY_SVITSHOT = 159; // Свитшоты
+    public const int CATEGORY_TOP = 185; // Топы
+    public const int CATEGORY_KITCHEN_APRONS = 402; // Фартуки кухонные
+    public const int CATEGORY_WORKERS_APRONS = 3188; // Фартуки рабочие;
+    public const int CATEGORY_SLIPPERS = 106; // Тапки;
+    public const int CATEGORY_STRAPS = 107; // Шлепанцы;
+    public const int CATEGORY_SABO = 98; // Cабо;
     public const int CATEGORY_CZECH = 1586; // Чешки;
     public const int CATEGORY_LONGSLEEVE = 217; // Лонгсливы
 

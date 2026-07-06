@@ -32,13 +32,33 @@ use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[AutoconfigureTag('baks.wb.product.params')]
-final class ProfileWildberriesProductParameters implements WildberriesProductParametersInterface
+final class WidthPackageWildberriesProductParameters implements WildberriesProductParametersInterface
 {
     public const array CATEGORY = [
         WildberriesProductProperty::CATEGORY_TIRE,
+        WildberriesProductProperty::CATEGORY_SHIRTS_SPORT,
+        WildberriesProductProperty::CATEGORY_DESKS,
+        WildberriesProductProperty::CATEGORY_RACKS,
+        WildberriesProductProperty::CATEGORY_SHIRTS,
+        WildberriesProductProperty::CATEGORY_HOODIE,
+        WildberriesProductProperty::CATEGORY_JEANS,
+        WildberriesProductProperty::CATEGORY_SVITSHOT,
+        WildberriesProductProperty::CATEGORY_TOP,
+        WildberriesProductProperty::CATEGORY_KITCHEN_APRONS,
+        WildberriesProductProperty::CATEGORY_WORKERS_APRONS,
+        WildberriesProductProperty::CATEGORY_SLIPPERS,
+        WildberriesProductProperty::CATEGORY_STRAPS,
+        WildberriesProductProperty::CATEGORY_SABO,
+        WildberriesProductProperty::CATEGORY_CZECH,
+        WildberriesProductProperty::CATEGORY_LONGSLEEVE,
     ];
 
-    public const int ID = 244948;
+    public const int ID = 90745;
+
+    public function getName(): string
+    {
+        return 'Ширина упаковки, см';
+    }
 
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
@@ -82,8 +102,7 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
                     return [
                         'id' => $this::ID,
                         'name' => $this->getName(),
-                        /** Если шина безразмерная - указываем по умолчанию 80 */
-                        'value' => $product_param->value === 'null' ? '80' : $product_param->value,
+                        'value' => $product_param->value,
                     ];
                 }
             }
@@ -105,8 +124,4 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
         ], true);
     }
 
-    public function getName(): string
-    {
-        return 'Высота профиля';
-    }
 }

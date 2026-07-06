@@ -103,9 +103,8 @@ class WbCharacteristicRequestTest extends KernelTestCase
             foreach($data as $item)
             {
 
-
                 self::assertNotFalse($params,
-                    sprintf('Отсутствует элемент ID = %s ( %s ) для категории %s', $item->getId(), $item->getName(), $category),
+                    sprintf('Отсутствует элемент ID = %s ( %s, %s ) для категории %s', $item->getId(), $item->getName(), $item->getUnit(), $category),
                 );
 
                 /** Проверяем по всем параметрам */
@@ -113,7 +112,7 @@ class WbCharacteristicRequestTest extends KernelTestCase
                 self::assertNotEmpty(array_filter($params,
                     static function(WildberriesProductParametersInterface $param) use ($item) {
                         return $param->equals($item->getId());
-                    }), sprintf('Отсутствует элемент ID = %s ( %s ) для категории %s', $item->getId(), $item->getName(), $category));
+                    }), sprintf('Отсутствует элемент ID = %s ( %s, %s ) для категории %s', $item->getId(), $item->getName(), $item->getUnit(), $category));
 
 
                 ++$count;

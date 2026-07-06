@@ -32,13 +32,15 @@ use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[AutoconfigureTag('baks.wb.product.params')]
-final class ProfileWildberriesProductParameters implements WildberriesProductParametersInterface
+final class MaterialTopWildberriesProductParameters implements WildberriesProductParametersInterface
 {
     public const array CATEGORY = [
-        WildberriesProductProperty::CATEGORY_TIRE,
+        WildberriesProductProperty::CATEGORY_SABO,
+        WildberriesProductProperty::CATEGORY_SLIPPERS,
+        WildberriesProductProperty::CATEGORY_STRAPS,
     ];
 
-    public const int ID = 244948;
+    public const int ID = 15003971;
 
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
@@ -82,8 +84,7 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
                     return [
                         'id' => $this::ID,
                         'name' => $this->getName(),
-                        /** Если шина безразмерная - указываем по умолчанию 80 */
-                        'value' => $product_param->value === 'null' ? '80' : $product_param->value,
+                        'value' => $product_param->value,
                     ];
                 }
             }
@@ -107,6 +108,6 @@ final class ProfileWildberriesProductParameters implements WildberriesProductPar
 
     public function getName(): string
     {
-        return 'Высота профиля';
+        return 'Материал верха';
     }
 }

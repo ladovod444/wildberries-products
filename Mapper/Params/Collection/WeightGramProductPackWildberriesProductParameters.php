@@ -45,6 +45,9 @@ final class WeightGramProductPackWildberriesProductParameters implements Wildber
         WildberriesProductProperty::CATEGORY_SLIPPERS,
         WildberriesProductProperty::CATEGORY_STRAPS,
         WildberriesProductProperty::CATEGORY_SABO,
+        WildberriesProductProperty::CATEGORY_SHIRTS_SPORT,
+        WildberriesProductProperty::CATEGORY_CZECH,
+        WildberriesProductProperty::CATEGORY_LONGSLEEVE,
     ];
 
     public const int ID = 88952;

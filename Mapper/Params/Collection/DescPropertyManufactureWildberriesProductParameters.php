@@ -40,6 +40,11 @@ final class DescPropertyManufactureWildberriesProductParameters implements Wildb
 
     public const int ID = 19072;
 
+    public function getName(): string
+    {
+        return 'Особенности стола';
+    }
+
     /**
      * Сортировка (чем меньше число - тем первым в итерации будет значение)
      */
@@ -103,11 +108,5 @@ final class DescPropertyManufactureWildberriesProductParameters implements Wildb
             mb_strtolower($this->getName()),
         ], true);
     }
-
-    public function getName(): string
-    {
-        return 'Особенности стола';
-    }
-
 
 }

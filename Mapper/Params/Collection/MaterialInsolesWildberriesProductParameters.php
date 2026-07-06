@@ -38,6 +38,7 @@ final class MaterialInsolesWildberriesProductParameters implements WildberriesPr
         WildberriesProductProperty::CATEGORY_SLIPPERS,
         WildberriesProductProperty::CATEGORY_SABO,
         WildberriesProductProperty::CATEGORY_CZECH,
+        WildberriesProductProperty::CATEGORY_STRAPS,
     ];
 
     public const int ID = 1023;
